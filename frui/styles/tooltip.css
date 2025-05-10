@@ -1,21 +1,21 @@
 .frui-tooltip-container {
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 .frui-tooltip {
-  position: absolute;
-  z-index: 10;
   background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  min-width: 70px;
-  text-align: center;
+  color: #fff;
   font-size: 0.9rem;
   line-height: 1.5;
+  min-width: 70px;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: center;
   white-space: nowrap;
+  z-index: 10;
 }
 
 /* Shape variations */
@@ -23,12 +23,12 @@
   border-radius: 12px;
 }
 
-.frui-rounded {
-  border-radius: 4px;
-}
-
 .frui-pill {
   border-radius: 20px;
+}
+
+.frui-rounded {
+  border-radius: 4px;
 }
 
 /* Arrow styling */
@@ -37,9 +37,9 @@
 }
 
 .frui-tooltip-arrow {
-  width: 0;
   height: 0;
   position: absolute;
+  width: 0;
 }
 
 .frui-tooltip-arrow.bottom {
@@ -51,75 +51,71 @@
   transform: translateX(-50%);
 }
 
-.frui-tooltip-arrow.top {
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid #333;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .frui-tooltip-arrow.left {
-  border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
   border-right: 6px solid #333;
+  border-top: 6px solid transparent;
   left: -5px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .frui-tooltip-arrow.right {
-  border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
   border-left: 6px solid #333;
+  border-top: 6px solid transparent;
   right: -5px;
   top: 50%;
   transform: translateY(-50%);
 }
 
+.frui-tooltip-arrow.top {
+  border-bottom: 6px solid #333;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%);
+}
+
 /* Color variations for arrow */
-.frui-tooltip-arrow.bottom.info,
-.frui-tooltip-arrow.top.info,
-.frui-tooltip-arrow.left.info,
-.frui-tooltip-arrow.right.info {
-  --arrow-color: #1474FC;
-}
-
-.frui-tooltip-arrow.bottom.warning,
-.frui-tooltip-arrow.top.warning,
-.frui-tooltip-arrow.left.warning,
-.frui-tooltip-arrow.right.warning {
-  --arrow-color: #FF7B07;
-}
-
-.frui-tooltip-arrow.bottom.success,
-.frui-tooltip-arrow.top.success,
-.frui-tooltip-arrow.left.success,
-.frui-tooltip-arrow.right.success {
-  --arrow-color: #28A745;
-}
-
 .frui-tooltip-arrow.bottom.error,
-.frui-tooltip-arrow.top.error,
 .frui-tooltip-arrow.left.error,
-.frui-tooltip-arrow.right.error {
+.frui-tooltip-arrow.right.error,
+.frui-tooltip-arrow.top.error {
   --arrow-color: #DC3545;
 }
 
+.frui-tooltip-arrow.bottom.info,
+.frui-tooltip-arrow.left.info,
+.frui-tooltip-arrow.right.info,
+.frui-tooltip-arrow.top.info {
+  --arrow-color: #1474FC;
+}
+
 .frui-tooltip-arrow.bottom.muted,
-.frui-tooltip-arrow.top.muted,
 .frui-tooltip-arrow.left.muted,
-.frui-tooltip-arrow.right.muted {
+.frui-tooltip-arrow.right.muted,
+.frui-tooltip-arrow.top.muted {
   --arrow-color: #999999;
+}
+
+.frui-tooltip-arrow.bottom.success,
+.frui-tooltip-arrow.left.success,
+.frui-tooltip-arrow.right.success,
+.frui-tooltip-arrow.top.success {
+  --arrow-color: #28A745;
+}
+
+.frui-tooltip-arrow.bottom.warning,
+.frui-tooltip-arrow.left.warning,
+.frui-tooltip-arrow.right.warning,
+.frui-tooltip-arrow.top.warning {
+  --arrow-color: #FF7B07;
 }
 
 .frui-tooltip-arrow.bottom {
   border-top-color: var(--arrow-color, #333);
-}
-
-.frui-tooltip-arrow.top {
-  border-bottom-color: var(--arrow-color, #333);
 }
 
 .frui-tooltip-arrow.left {
@@ -128,4 +124,8 @@
 
 .frui-tooltip-arrow.right {
   border-left-color: var(--arrow-color, #333);
+}
+
+.frui-tooltip-arrow.top {
+  border-bottom-color: var(--arrow-color, #333);
 }
